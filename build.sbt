@@ -32,6 +32,9 @@ lazy val root = (project in file(".")).
         //libraryDependencies += "org.scalactic" %% "scalactic" % "3.0.4"
         //libraryDependencies += "org.scalatest" %% "scalatest" % "3.0.4" % "test",
 
+        // add typesafe config dependencies
+        libraryDependencies += "com.typesafe" % "config" % "1.3.1",
+
         // add Logback, SLF4j dependencies
         libraryDependencies += "ch.qos.logback" % "logback-classic" % "1.2.3",
         libraryDependencies += "ch.qos.logback" % "logback-core" % "1.2.3",
@@ -39,9 +42,6 @@ lazy val root = (project in file(".")).
 
         // add HZUtil dependency
         libraryDependencies += "org.hirosezouen" %% "hzutil" % "2.2.0",
-
-        // splay-json dependency
-//        libraryDependencies += "io.spray" %% "spray-json" % "1.3.2",
 
         // sbt-native-packager settings
         executableScriptName := "DirectoryLister",
@@ -56,15 +56,15 @@ lazy val root = (project in file(".")).
         isSnapshot := true,
 
         // fork new JVM when run and test and use JVM options
-//        fork := true,
-//        javaOptions += "-Djava.library.path=lib",
+        //fork := true,
+        //javaOptions += "-Djava.library.path=lib",
 
         // misc...
         parallelExecution in Test := false,
-//        logLevel := Level.Debug,
+        //logLevel := Level.Debug,
         scalacOptions += "-deprecation",
         scalacOptions += "-feature",
-        scalacOptions += "-Xlint",
+        scalacOptions += "-Xlint:unused"
         scalacOptions += "-Xfatal-warnings"
     )
 
