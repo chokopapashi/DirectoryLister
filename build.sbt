@@ -22,9 +22,6 @@ lazy val root = (project in file(".")).
         // set the name of the project
         name := "DirectoryLister",
 
-        // Reflect of Ver2.10.1-> requires to add libraryDependencies explicitly
-        //libraryDependencies <+= scalaVersion { "org.scala-lang" % "scala-reflect" % _ },
-
         // Reflect of Ver2.10.1 requires to add libraryDependencies explicitly
         //libraryDependencies <+= scalaVersion { "org.scala-lang" % "scala-reflect" % _ },
 
