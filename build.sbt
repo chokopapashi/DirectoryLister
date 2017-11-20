@@ -64,7 +64,7 @@ lazy val root = (project in file(".")).
         //logLevel := Level.Debug,
         scalacOptions += "-deprecation",
         scalacOptions += "-feature",
-        scalacOptions += "-Xlint:unused"
         scalacOptions += "-Xfatal-warnings"
+        //scalacOptions += "-Xlint:unused"
     )
 
